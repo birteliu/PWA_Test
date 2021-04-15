@@ -4,7 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>-網站標題</title>
+    <title>{% block title %}{% endblock %}-PWA</title>
+
+    <!-- ios -->
+    <link rel="apple-touch-icon" href="images/custom_icon.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/launch.png">
+    <meta name="apple-mobile-web-app-title" content="PWA TEST">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f2022">
+    
+
     <link rel="manifest" href="manifest.json">
     <!-- 樣式 SR -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -13,12 +28,12 @@
 
 <body cz-shortcut-listen="true">
     <!-- 選單 ST -->
-    
+    {% block navigation %}{% endblock %}
     <!-- 選單 END -->
 
     <main role="main">
         <!-- 內容切換 ST -->
-        
+        {% block content %}{% endblock %}
         <!-- 內容切換 END -->
     </main>
 
