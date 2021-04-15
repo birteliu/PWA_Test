@@ -1,0 +1,16 @@
+// 引入用
+// 修改的變數
+// @import "../scss/_variables.scss";
+
+// fontawesome icon
+//@import "../scss/fontawesome-all";
+
+// bootstrap 核心
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// 自訂文字
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700&subset=chinese-traditional');
+
+// 客製化CSS
+@import "_custom.scss";
+
