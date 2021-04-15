@@ -13,7 +13,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "index.html",
+    "start_url": "https://birteliu.github.io/PWA_Test/",
     "background_color": "#3f5d45",
     "display": "standalone",
     "theme_color": "#3f5d45"
