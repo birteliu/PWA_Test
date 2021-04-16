@@ -1,20 +1,88 @@
-<!-- index.nunjucks -->
-{% extends "layout.html" %}
-<!--TITLE setting-->
-{% block title %}首頁{% endblock %}
-<!--Nav setting-->
-{% block navigation %}
-{% import 'macros/nav.html' as nav %}
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>首頁-PWA</title>
+
+    <!-- ios -->
+    <link rel="apple-touch-icon" href="images/custom_icon.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/launch.png">
+    <meta name="apple-mobile-web-app-title" content="PWA TEST">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1f2022">
+    
+
+    <link rel="manifest" href="manifest.json">
+    <!-- 樣式 SR -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- 樣式 END -->
+</head>
+
+<body cz-shortcut-listen="true">
+    <!-- 選單 ST -->
+    
+
 <!-- Set navitem to active -->
-{{nav.active('index')}}
-{% endblock %}
-{% block content %}
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+    <!-- 選單 END -->
+
+    <main role="main">
+        <!-- 內容切換 ST -->
+        
 <!-- 內容切換範圍 SR -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3 index-left p-3">123</div>
         <div class="col-md-9 p-3">
-            <h3 class="fw-bold">首頁</h3>
+            <h3 class="fw-bold">第二頁</h3>
             <div class="container px-1 index-right">
                 <div class="row g-3">
                     <div class="col-md-4">
@@ -71,15 +139,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-shadow p-3 rounded-3"><h5>29</h5></div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card-shadow p-3 rounded-3"><h5>29</h5></div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="card-shadow p-3 rounded-3"><h5>29</h5></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -88,7 +147,7 @@
 <div class="container-fluid footer-tabs g-0">
     <div class="row">
         <div class="col-6 p-0">
-            <a href="index.html" class="page active">
+            <a href="index.html" class="page">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
                     <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
                 </svg>
@@ -96,7 +155,7 @@
             </a>
         </div>
         <div class="col-6 p-0">
-            <a href="page2.html" class="page">
+            <a href="page2.html" class="page active">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
                 </svg>
@@ -106,10 +165,22 @@
     </div>
 </div>
 <!-- 內容切換範圍 END -->
-{% endblock %}
 
-{% block js %}
-<!-- 特定分頁使用js or 單獨引用放置處 START -->
-<!-- <script></script> -->
-<!-- 特定分頁使用js or 單獨引用放置處 END -->
-{% endblock %}
+        <!-- 內容切換 END -->
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("Will?");
+            navigator.serviceWorker.register('sw.js').then(function(reg){
+                console.log("Yes it did.");
+            }).catch(function(err) {
+                console.log("Not. This happeded:", err)
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

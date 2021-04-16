@@ -10349,6 +10349,10 @@ fieldset:disabled .btn {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .index-left {
   background-color: #198754;
   color: #fff;
@@ -10356,6 +10360,34 @@ fieldset:disabled .btn {
 
 .index-right .card-shadow {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.footer-tabs {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-tabs .page {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #ced4da;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-tabs .page:hover {
+  background-color: #adb5bd;
+}
+
+.footer-tabs .page.active {
+  background-color: #000;
+  font-weight: bold;
+}
+
+.footer-tabs .page svg {
+  margin-right: .25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
