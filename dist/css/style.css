@@ -10353,6 +10353,10 @@ body {
   overflow-x: hidden;
 }
 
+.main-content {
+  min-height: 120vh;
+}
+
 .index-left {
   background-color: #198754;
   color: #fff;
@@ -10363,7 +10367,7 @@ body {
 }
 
 .footer-tabs {
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
